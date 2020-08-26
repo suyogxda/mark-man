@@ -1,4 +1,4 @@
-# Python script to add and remove watermark 
+# Python script to add and remove watermark using opencv library
 ### Sample image:
 ![image info](./sample/sample_image.png "Sample image")
 
