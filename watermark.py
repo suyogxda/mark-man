@@ -58,6 +58,7 @@ class Watermark:
             cv2.putText(zeros, text_to_print, (0, y_cord), self.font, self.font_scale, self.color, self.thickness)
             y_cord += self.text_height * 2
         watermarked_image = cv2.addWeighted(zeros, self.alpha, self.image, 1, 0)
+        print("Successfully added watermark")
         self.__write_image(watermarked_image)
         return watermarked_image
 
@@ -71,5 +72,6 @@ class Watermark:
             cv2.putText(zeros, text_to_print, (0, y_cord), self.font, self.font_scale, self.color, self.thickness)
             y_cord += self.text_height * 2
         un_watermarked_image = cv2.addWeighted(self.image, self.reverse_alpha, zeros, self.reverse_gamma, 0)
+        print("Successfully removed watermark")
         self.__write_image(un_watermarked_image)
         return un_watermarked_image
